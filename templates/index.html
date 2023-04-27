@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>BERT-CPI</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!---<link rel='stylesheet' type='text/css' media='screen' href='style.css'>-->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="title">BERT CODICE PENALE ITALIANO</div>
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="input-details">
+                <div class="input-box">
+                    <span class="details">Massima</span>
+                    {%if maintainText %}
+                    <input type="text" name="inference-text" placeholder="massima da classificare" value="{{ previous_text }}"required>
+                    {% else %}
+                    <input type="text" name="inference-text" placeholder="massima da classificare" required>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Classifica">
+            </div>
+        </form>
+        {%if isDisplay%}
+        <div class="div-res">
+            <div class="results-title">Risultati</div>
+            <div class="results-text">
+                <span class="testo-massima">{{massima_text}}</span>
+            </div>
+            <div class="results-details">
+                <span class="results">{{ prediction_text }}</span>
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+    </div>
+</body>
+</html>

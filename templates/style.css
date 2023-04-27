@@ -1,0 +1,152 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Poppins:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #08314d, #ece7e7);
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container .title{
+    font-size: 25px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    position: relative;
+}
+.container .title::before{
+    content:  '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 50%;
+    background: linear-gradient(135deg, #05446e, #fff);
+}
+.container form .input-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .input-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-details .input-box .details{
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.input-details .input-box input{
+    height: 100px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.input-details .input-box input:focus,
+.input-details .input-box input:valid{
+    border-color: #05446e;
+}
+
+form .button{
+    height: 45px;
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background:#05446e;
+}
+
+form .button input:hover{
+    background: #1d5479;
+}
+
+.container .results-title{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    justify-content: space-between;
+    margin: 12px 0 12px 0;
+}
+
+.results-title .span-results{
+    display: block;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.results-text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 12px 0 12px 0;
+}
+
+.results-text .testo-massima{
+    display: block;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.results-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 12px 0 12px 0;
+}
+
+.results-details .results{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+ @media (max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+    form .input-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .container form .input-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .input-details::-webkit-scrollbar{
+        width: 0;
+    }
+ }
